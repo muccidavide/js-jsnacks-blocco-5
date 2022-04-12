@@ -1,8 +1,6 @@
 /* 
-SNACK 2
-Crea 10 oggetti che rappresentano una zucchina.
-Dividi in due array separati le zucchine che misurano meno o più di 15cm.
-Infine stampa separatamente quanto pesano i due gruppi di zucchine.
+Crea un array di 10 oggetti che rappresentano una zucchina, indicando per ognuna varietà, peso e lunghezza.
+Calcola quanto pesano tutte le zucchine.
 
 */
 
@@ -54,26 +52,18 @@ const zucchine = [
     },
     {
         varieta: "jedi",
-        peso: 0.6,
+        peso: 1.6,
         lunghezza: 18,
     }
 ]
 
-let zucchineCorte = zucchine.filter((zucchina) => zucchina.lunghezza < 15)
-let zucchineLunghe = zucchine.filter((zucchina) => zucchina.lunghezza > 15)
-console.log(zucchineCorte);
+// somma peso zucchine
+let somma = 0;
+zucchine.forEach((zucchina)=>{
+    let peso = zucchina.peso
 
-let sommaCorte = 0, sommaLunghe = 0;
-zucchineCorte.forEach(zucchina => {
-    sommaCorte += zucchina.peso
+    somma += peso
     
-});
+})
 
-zucchineLunghe.forEach(zucchina => {
-    sommaLunghe += zucchina.peso
-    
-});
-
-console.log(sommaCorte);
-console.log(sommaLunghe);
-
+console.log(somma);
