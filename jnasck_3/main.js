@@ -4,11 +4,14 @@ Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (
 
 let parola = "ciao"
 
+/**
+ * 
+ * @param {string} parola 
+ * @returns {string}
+ */
+
 function reverseWord(parola) {
-    let newArray = Array.from(parola)
-    reverseArray = newArray.reverse();
-    let word = newArray.join('')
-    return word
+    return Array.from(parola).reverse().join('')
     
 }
 
