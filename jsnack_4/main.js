@@ -20,3 +20,18 @@ function join(array1,array2) {
 }
 
 console.log(join(array1,array2));
+
+function join2(array1,array2) {
+    let joinArray2 = []
+    array1.forEach((element,i)=>{
+        const element2 = array2[i];
+    
+        joinArray2.push(element)
+        joinArray2.push(element2)  
+
+})
+    return joinArray2;
+}
+
+console.log(join2(array1,array2));
+
